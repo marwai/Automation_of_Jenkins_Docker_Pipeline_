@@ -1,0 +1,31 @@
+# docker pull version 3 of mongo
+version: '3'
+services:
+  db:
+    image: mongo
+    
+    # volumes: working progress 
+    # environment/db/mongod.conf:/etc/mongod.conf
+    # ./db:/var/lib/mongodb
+    
+    # equivalent of 'sudo systemctl restart mongod' and enables it is working 
+    restart: always
+    # binds db to this port
+    ports: [27017:27017]
+
+  web:
+    # Build the dockerfile in the app in same dir
+    build: ./app
+    restart: always
+    ports: [3000:3000]
+     
+    # export dh_host to development environment
+    environment:
+      - DB_HOST=mongodb://db:27017/posts
+
+    # expresses dependency of db to work for app to work 
+    depends_on:
+      - db
+
+
+
