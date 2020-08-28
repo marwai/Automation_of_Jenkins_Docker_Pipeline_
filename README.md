@@ -108,3 +108,4 @@ sudo chmod 666 /var/run/docker.sock
 
 download the pipline plugin!
 
+test
