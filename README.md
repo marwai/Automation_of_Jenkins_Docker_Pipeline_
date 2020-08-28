@@ -84,7 +84,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 ![](images/10.png)
 
 
-# Install the dependencies to refactor 
+# Install the dependencies (format this*) 
 
 1) download jenkins using recommended settings
 
