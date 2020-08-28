@@ -93,7 +93,17 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 4) 
 3) In the worker vm paste this
 ``` 
+ssh -i ~/.ssh/DevOpsStudents.pem ubuntu@34.242.116.0
 java -jar agent.jar -jnlpUrl http://34.243.215.99:8080/computer/Eng67.Man-Wai.Worker.Node/slave-agent.jnlp -secret da74ace56e42d38af836411ad5c4efb7fc4b5e861c2f14fdc963e57108ca1cb5 -workDir "/opt/jenkins"
 ```
+
 #testing integration
 
+# Update docker privilegdes before delivery
+sudo usermod -aG docker ${USER}
+newgrp docker
+sudo service docker restart
+sudo systemctl restart docker
+sudo chmod 666 /var/run/docker.sock
+
+download the pipline plugin!
