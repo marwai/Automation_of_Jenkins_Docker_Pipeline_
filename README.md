@@ -3,6 +3,7 @@
 # make provision file
 
 
+
 # Notes
 
 
@@ -99,7 +100,7 @@ java -jar agent.jar -jnlpUrl http://34.243.215.99:8080/computer/Eng67.Man-Wai.Wo
 
 #testing integration
 
-# Update docker privilegdes before delivery
+# Update docker privileges before delivery
 sudo usermod -aG docker ${USER}
 newgrp docker
 sudo service docker restart
