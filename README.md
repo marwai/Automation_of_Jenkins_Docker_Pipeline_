@@ -107,6 +107,6 @@ sudo service docker restart
 sudo systemctl restart docker
 sudo chmod 666 /var/run/docker.sock
 
-download the pipline plugin!
+download the pipeline plugin!
 
 test
