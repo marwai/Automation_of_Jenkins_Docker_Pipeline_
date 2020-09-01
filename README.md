@@ -2,7 +2,7 @@
 
 # make provision file
 
-
+![video](images/end-to-end-automated-demo.mp4)
 
 # Notes
 
